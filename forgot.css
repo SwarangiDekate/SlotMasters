@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(college.png); 
+    height:100vh;
+    background-size: cover;
+}
+
+.container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+    margin-top: 18vh;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: none;
+}
+
+button {
+    width: 100%;
+    padding: 0.7rem;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #444;
+}
+img {
+    width:6vw;
+    height: 8vh;
+    padding-left: 1vh;
+}
+.dem {
+    padding-top: 4vh;
+}
+
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: none;
+}
+i{
+    height: 2vh;
+    width:2vw;
+    display:block;
+}
+.logo {
+    padding-left: 7vw;
+}
+a {
+    text-decoration: none;
+    padding-left: 3vw;
+    padding-top:0vh;
+    padding-bottom: 0vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    
+
+}

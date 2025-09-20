@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Lab Dashboard</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  display:flex;
+  min-height:100vh;
+  font-family:'Segoe UI',Arial,sans-serif;
+  background:#0d0d0d;
+  color:#eee;
+}
+
+/* Sidebar */
+.sidebar{
+  width:260px;
+  background:#1c1f26;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.logo{width:70px;height:70px;border-radius:50%;margin:0 auto 10px;display:block}
+.sidebar h2{text-align:center;color:#0ff;margin-bottom:15px;font-size:1.6rem}
+.nav-links a{
+  display:block;padding:10px;margin:8px 0;
+  text-decoration:none;color:#eee;background:#2a2f3a;
+  border-radius:6px;transition:.3s
+}
+.nav-links a:hover,
+.nav-links a.active{background:#0ff;color:#000}
+
+/* Chatbot */
+.chatbot{border-top:1px solid #444;padding-top:15px}
+.chatbot h3{margin-bottom:10px;color:#0ff}
+.chat-window{
+  background:#2a2f3a;height:150px;overflow-y:auto;
+  padding:10px;margin-bottom:10px;border-radius:6px;font-size:14px
+}
+.chat-window p{margin:4px 0;padding:4px 6px;border-radius:4px}
+.chat-window p.bot{background:#1e1e1e}
+.chat-window p.user{background:#0ff;color:#000}
+.chat-input{display:flex;gap:5px}
+.chat-input input{
+  flex:1;padding:6px;border:none;border-radius:4px;
+  background:#1e1e1e;color:#eee
+}
+.chat-input button{
+  padding:6px 10px;background:#0ff;border:none;
+  border-radius:4px;cursor:pointer;color:#000;font-weight:bold
+}
+
+/* Main content */
+.main{flex:1;padding:40px;background:#11151c;overflow:hidden; margin-left: 20px;}
+.main h1{color:#0ff;margin-bottom:20px;font-size:2rem}
+.section{
+  background:#1c1f26;padding:20px;border-radius:8px;
+  margin-bottom:30px;line-height:1.6
+}
+.section h2{color:#0ff;margin-bottom:15px}
+.section table{width:100%;border-collapse:collapse;margin-top:10px}
+.section th,.section td{
+  border:1px solid #333;padding:8px;text-align:left
+}
+.section img{
+  width: 800px;
+}
+.section tr.overload td{background:#ff5555;color:#000;font-weight:bold}
+</style>
+</head>
+<body>
+  <aside class="sidebar">
+    <div>
+      <img src="https://via.placeholder.com/70" alt="Logo" class="logo">
+      <h2>AI Lab</h2>
+      <nav class="nav-links">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#visiting">Visiting Schedule</a>
+        <a href="#timetable">Teacher Timetable</a>
+        <a href="#updates">Updates / Feedback</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot">
+      <h3>Chatbot</h3>
+      <div class="chat-window" id="chatWindow">
+        <p class="bot"><strong>Bot:</strong> Hi! Ask me about lab timings.</p>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type a message…">
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <!-- Profile / About -->
+    <div class="section" id="profile">
+      <h2>Profile</h2>
+      <img src="/" alt="Profile" style="">
+      <p><strong>About:</strong> Welcome to the AI Research Lab dashboard. Here you can view visiting schedules, teacher loads, room availability, and current research updates.</p>
+    </div>
+
+    <!-- Visiting Schedule + Teacher Load -->
+    <div class="section" id="visiting">
+      <h2>Visiting Schedule & Teacher Load</h2>
+      <p><strong>Lab Timings:</strong> Mon–Fri 9 AM–12 PM & 1 PM–5 PM, Sat 10 AM–2 PM (Appointment Required)</p>
+
+      <h3 style="margin-top:15px;">Teacher Load & Room Availability</h3>
+      <table>
+        <tr><th>Teacher</th><th>Subjects Assigned</th><th>Room Availability</th></tr>
+        <tr><td>Pallavi Bagde</td><td>5</td><td>Room A</td></tr>
+        <tr class="overload"><td>Saundarya Raut</td><td>6 (Overload)</td><td>Room B</td></tr>
+        <tr><td>Sarika Devde</td><td>4</td><td>Room C</td></tr>
+        <tr class="overload"><td>Priti Kumar</td><td>6 (Overload)</td><td>Room D</td></tr>
+        <tr><td>Surekha Sikri</td><td>3</td><td>Room E</td></tr>
+      </table>
+      <p style="margin-top:8px;font-size:0.9rem;">Overload detected where subjects > 5. Teachers must have at least 2 free periods to avoid overload.</p>
+    </div>
+
+    <!-- Teacher Timetable -->
+    <div class="section" id="timetable">
+      <h2>Teacher Timetable</h2>
+      <img src="table2.png">
+    </div>
+
+    <!-- Updates / Feedback -->
+    <div class="section" id="updates">
+      <h2>Updates / Feedback</h2>
+      <ul>
+        <li><h5>Room B</h5> under maintenance – temporarily moved to Room F.</li>
+        <li>New course: “Advanced AI Timetabling” added.</li>
+        <li>Available teachers for extra classes: Pallavi Bagde, Surekha Sikri.</li>
+      </ul>
+    </div>
+
+    <!-- Research -->
+    <div class="section" id="research">
+      <h2>Research</h2>
+      <p>Recent papers on AI-based timetable generation:</p>
+      <ul>
+        <li><a href="#" style="color:#0ff;">AI Timetable Optimization with Genetic Algorithms (2024)</a></li>
+        <li><a href="#" style="color:#0ff;">Deep Learning for Dynamic Room Allocation (2023)</a></li>
+        <li><a href="#" style="color:#0ff;">Multi-Agent Systems for College Timetabling (2022)</a></li>
+      </ul>
+    </div>
+  </main>
+
+<script>
+const chatWindow = document.getElementById('chatWindow');
+const userInput  = document.getElementById('userInput');
+const sendBtn    = document.getElementById('sendBtn');
+
+function appendMessage(sender,text){
+  const p=document.createElement('p');
+  p.className = sender==='Bot' ? 'bot':'user';
+  p.innerHTML=<strong>${sender}:</strong> ${text};
+  chatWindow.appendChild(p);
+  chatWindow.scrollTo({top:chatWindow.scrollHeight,behavior:'smooth'});
+}
+
+function botReply(msg){
+  const m=msg.toLowerCase();
+  if(m.includes('time')||m.includes('schedule'))
+    return "Lab Mon–Fri 9–12 & 1–5, Sat 10–2. Appointment required.";
+  if(m.includes('teacher'))
+    return "Teachers: Pallavi, Saundarya, Sarika, Priti, Surekha.";
+  if(m.includes('room'))
+    return "Available rooms: A–E, note Room B under maintenance.";
+  return "I'm a simple bot—ask about lab timings, teachers, or rooms!";
+}
+
+function sendMessage(){
+  const text=userInput.value.trim();
+  if(!text) return;
+  appendMessage('You',text);
+  userInput.value='';
+  setTimeout(()=>appendMessage('Bot',botReply(text)),500);
+}
+
+sendBtn.addEventListener('click',sendMessage);
+userInput.addEventListener('keydown',e=>{if(e.key==='Enter')sendMessage();});
+</script>
+</body>
+</html>

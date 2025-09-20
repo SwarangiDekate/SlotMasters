@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Login with OTP</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<body>
+  <form action="update5.html" class="Login">
+    <div class="container">
+      <span>
+        <!-- <img class="ghrce" src="logoghrce.png"> --> 
+        <!-- <img class="logo" src="logo2.jpg"> -->
+      </span>
+      <h2 style="color:aqua">Teacher Login</h2>
+
+      <!-- Step 1: Enter email -->
+      <div id="step1">
+        <input type="email" id="email" placeholder="Enter college email"  />
+        <input type="password" id="password" placeholder="password" required />
+        <i _ngcontent-ofo-c370="" aria-hidden="true" class="fa fa-eye-slash fa-hand-cursor"></i>
+        <a href="forgot.html"style="color:aqua" >forgot password ?</a>
+        <div class="dem">
+          <div _ngcontent-kcc-c370="" class="googleCaptcha"><re-captcha _ngcontent-kcc-c370="" id="ngrecaptcha-0"
+              required>
+              <div style="width: 304px; height: 78px;">
+                <div>
+                  <iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-q1m0ck46etwz"
+                    frameborder="0" scrolling="no"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LefrcAqAAAAAAtZfDekeyxDXnwy872FU7phEwwc&amp;co=aHR0cHM6Ly9raWV0LmN5YmVydmlkeWEubmV0OjQ0Mw..&amp;hl=en&amp;v=44LqIOwVrGhp2lJ3fODa493O&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=15000&amp;cb=eygjuk62yvpk"></iframe>
+                </div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
+                  style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                </div><iframe style="display: none;"></iframe>
+            </re-captcha></div>
+          <button type="submit">Login</button>
+        </div>
+        <!-- <button onclick="sendOtp()">Send OTP</button> -->
+        <!-- </div> -->
+
+        <!-- Step 2: Enter OTP -->
+        <!-- <div id="step2" class="hidden">
+        <input type="text" id="otp" name="otp" placeholder="Enter 6-digit OTP" required />
+        <button onclick="verifyOtp()">Verify & Login</button>
+      </div> -->
+        <!-- <div class="dem">
+        <button type="submit">Submit</button>
+
+      </div> -->
+
+        <div id="msg" class="message"></div>
+      </div>
+  </form>
+  <script src="https://www.google.com/recaptcha/api.js?render=YOUR_SITE_KEY"></script>
+  <script src="app.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</body>
+
+</html>

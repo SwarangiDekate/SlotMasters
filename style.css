@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    background:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-image: url(back5.png); 
+    background-repeat:no-repeat;
+    background-position: center;
+    background-position: 100%;
+    padding: 2rem 2rem;
+    width:30 rem;
+    background-size: cover;
+
+}
+button{
+    width:2rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.container {
+    background-color: rgb(14, 14, 64);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align:center;
+    margin-top: 18vh;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    height: 50% ;
+    box-shadow: 2px 2px white;
+
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 90%;
+    padding: 0.7rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: none;
+}
+
+/* .container {
+      /* display: flex;                 /* side-by-side layout  */
+      /* align-items: center;           /* vertically center   */
+      /* justify-content: space-between;
+      max-width: 1000px;
+      margin: 40px auto;
+      gap: 2rem;                     /* space between items */
+
+/* .container img {
+      width: 45%;                    /* image takes ~45% */
+      /* height: auto;
+      border-radius: 8px;
+}
+.text-box {
+      flex: 1;                       take remaining width
+      font-size: 1.1rem;
+}*/
+@media (max-width: 768px) {
+    .container {
+    flex-direction: column;      /* stack on small screens */
+    text-align: center; 
+    container img { width: 100%; } 
+}}
+
+button {
+    width: 60%;
+    padding: 0.7rem;
+    background: rgb(17, 187, 230);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-top: 1rem;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: #444;
+}
+img {
+    width:20vw;
+    height: 9vh;
+    padding-left: 2vh;
+    padding-top: 0.5rem;
+}
+.dem {
+    padding-top: 4vh;
+}
+
+input[type="password"],
+input[type="text"] {
+    width: 90%;
+    padding: 0.7rem;
+    margin: 0.5rem 0 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-image: none;
+}
+i{
+    height: 2vh;
+    width:2vw;
+    display:block;
+}
+.logo {
+    padding-left: 5vw;
+    width:30%;
+    padding-top: 10%;
+}
+a {
+    text-decoration: none;
+    padding-left: 3vw;
+    padding-top:0vh;
+    padding-bottom: 0vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+textarea{
+width: 250px;
+height: 40px; 
+border: 1px solid rgb(193, 193, 193);
+margin: 10px 25px; 
+padding: 0px; 
+resize: none; 
+display: none;
+}
+.recaptcha-checkbox {
+    border: none;
+    font-size: 1px;
+    height: 28px;
+    margin: 4px;
+    width: 28px;
+    overflow: visible;
+    outline: 0;
+    vertical-align: text-bottom;
+    padding-bottom: 1rem;
+}
